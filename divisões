@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	float n1, n2, calc;
+	printf("--!!Calculadora de divisões!!--\n");
+
+	// solicitando dividendo
+	printf("\n--Insira o dividendo: ");
+	scanf("%f", &n1);
+
+	// solicitando divisor
+	do {
+		printf("\n--Insira o divisor:   ");
+		scanf("%f", &n2);
+
+		// caso divisor seja zero:
+		if (n2 == 0)
+			printf("\ndivisões por 0 são invalidas!\n\n");
+	} while (n2 == 0);
+
+	// calculando e exibindo o resultado
+	calc = n1 / n2;
+	printf("\n--Quociente: %.4f", calc);
+
+	return 0;
+}
