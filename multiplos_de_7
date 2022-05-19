@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int n = 7, cont = 0, m = 0;
+	printf("\nMúltiplos de 7 menores que 200:\n");
+	do {
+		m = n * cont;
+		cont = cont + 1;
+    
+    // verificando se o número é realmente menor que 200
+		if (m < 200)
+			printf("%4d ", m);
+      
+    // organizando em colunas de até 5 
+		if (cont % 5 == 0)
+			printf("\n");
+	
+    } while (m < 200);
+  
+	return 0;
+}
